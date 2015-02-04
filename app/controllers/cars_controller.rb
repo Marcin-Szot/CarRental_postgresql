@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "railwaymen", except: :login
+  http_basic_authenticate_with name: "admin", password: "admin", except: :login
 
   def new
     @car = Car.new
