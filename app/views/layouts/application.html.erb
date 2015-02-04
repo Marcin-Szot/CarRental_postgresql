@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8" />
+  <title>Wypożyczalnia samochodów</title>
+  <meta name="keywords" content="samochód, wypożyczalnia" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="header">
+  <h1>Wypożyczalnia samochodów</h1>
+</div>
+
+<%= yield %>
+
+<div class = "foot">
+  <p id = "signum">Marcin Szot</p>
+</div>
+
+</body>

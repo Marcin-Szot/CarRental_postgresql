@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startdate: 2015-02-02
+  enddate: 2015-02-02
+  car_id: 
+
+two:
+  startdate: 2015-02-02
+  enddate: 2015-02-02
+  car_id: 

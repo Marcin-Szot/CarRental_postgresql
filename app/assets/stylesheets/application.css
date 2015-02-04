@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.header {
+    background: royalblue;
+    width: 100%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.body {
+    background: none;
+    width: 900px;
+    margin: auto;
+}
+
+.foot {
+    width: 100%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background: royalblue;
+    text-align: right;
+}
+
+.menu {
+    background: cadetblue;
+    width: 200px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-family: Corbel;
+    color: whitesmoke;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.error {
+    background-color: palevioletred;
+    width: 95%;
+    font-family: arial;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#logging {
+    width: 500px;
+    height: 300px;
+    padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: Corbel;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 95%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+form {
+    border: 2px dotted darkgrey;
+    padding-left: 20px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-family: "Courier New";
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+h2 {
+    color: darkgrey;
+    font-family: "Courier New";
+    font-size: 30px;
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: arial;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: darkgrey;
+    font-family: "Courier New";
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Arial Black";
+    margin-top: 5px;
+}
+
+table, th, td {
+    border: 1px solid green;
+    text-align: center;
+}
+
+th {
+    height: 30px;
+    padding-left: 10px;
+    background-color: green;
+    color: white;
+}
+
+td {
+    height: 20px;
+    padding: 5px;
+}
+
+p {
+    font-size: 20px;
+    font-family: Corbel;
+}
+
+#signum {
+    font-size: 15px;
+    margin-right: 50px;
+    margin-top: 20px;
+    color: whitesmoke;
+}

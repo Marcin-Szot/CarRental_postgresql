@@ -1,0 +1,29 @@
+<div class="body">
+  <div class = "menu">
+    <%= link_to "Dodaj samochód do bazy", new_car_path, style: 'text-decoration: none; color: white' %>
+  </div>
+
+  <h2>Samochody w bazie</h2>
+
+  <table>
+    <tr>
+      <th style = "width: 10%">Nazwa</th>
+      <th style = "width: 5%">Klasa</th>
+      <th style = "width: 70%">Opis</th>
+      <th></th>
+    </tr>
+    <% @cars.each do |car| %>
+        <tr>
+          <td><%= link_to car.name, car, style: 'color: black' %></td>
+          <td><%= car.category %></td>
+          <td><%= car.description %></td>
+          <td><%= link_to "Usuń samochód", car_path(car), method: :delete, data: {confirm: "Czy na pewno usunąć ten samochód z bazy?"},
+                          style: 'text-decoration: none; color: red' %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <% if @cars.size == 0 %>
+      <p>--Brak samochodów w bazie--</p>
+  <% end %>
+</div>

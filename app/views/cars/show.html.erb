@@ -1,0 +1,49 @@
+<div class="body">
+  <div class = "menu">
+    <%= link_to "Lista samochodów", cars_path, style: 'text-decoration: none; color: white'  %>
+  </div>
+
+  <h2><%= @car.name + " (klasa " + @car.category + ")" %></h2>
+
+  <p><%= @car.description %></p>
+
+  <h4>Terminy, w których samochód jest wypożyczony:</h4>
+
+  <table>
+    <tr>
+      <th style = "width: 30%">Początek wynajmu</th>
+      <th style = "width: 30%">Koniec wynajmu</th>
+      <th style = "width: 30%">Cena [PLN]</th>
+      <th></th>
+    </tr>
+    <% @car.slots.each do |slot| %>
+        <tr>
+          <td><%= slot.startdate %> </td>
+          <td><%= slot.enddate %> </td>
+          <td><%= (slot.enddate - slot.startdate + 1).to_i * (@car.category == "A" ? 100 : (@car.category == "B" ? 75 : 50)) %></td>
+          <td><%= link_to "Usuń rezerwację", [slot.car, slot], method: :delete, data: {confirm: "Czy na pewno usunąć tę rezerwację?"},
+                          style: 'text-decoration: none; color: red'%> </td>
+        </tr>
+    <% end %>
+  </table>
+
+  <% if @car.slots.size == 0 %>
+    <p>--Brak rezerwacji--</p>
+  <% end %>
+
+  <h4>Wypożycz samochód</h4>
+
+    <%= form_for([@car,@car.slots.build]) do |f| %>
+        <p>
+          <%= f.label "Początek wypożyczenia: " %>
+          <%= f.date_select :startdate %>
+        </p>
+
+        <p>
+          <%= f.label "Koniec wypożyczenia: " %>
+          <%= f.date_select :enddate %>
+        </p>
+
+        <p><%= f.submit "Zarezerwuj"%></p>
+    <% end %>
+</div>

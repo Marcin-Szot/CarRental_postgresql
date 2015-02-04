@@ -1,0 +1,37 @@
+<div class="body">
+  <div class = "menu">
+    <%= link_to "Lista samochodów", cars_path, style: 'text-decoration: none; color: white'  %>
+  </div>
+
+  <% if @car.errors.any? %>
+      <div class = "error">
+        <h3><%= pluralize(@car.errors.count, "error") %> prohibited this car from being added:</h3>
+        <ul>
+          <% @car.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+  <% end %>
+
+  <h2>Nowy samochód</h2>
+
+  <%= form_for :car, url: cars_path do |f| %>
+      <p>
+        <%= f.label "Nazwa samochodu: " %>
+        <%= f.text_field :name %>
+      </p>
+
+      <p>
+        <%= f.label "Klasa (kategoria): " %>
+        <%= f.text_field :category %>
+      </p>
+
+      <p>
+        <%= f.label "Opis: " %><br>
+        <%= f.text_area :description %>
+      </p>
+
+      <p><%= f.submit "Dodaj ten samochód do bazy" %></p>
+  <% end %>
+</div>
